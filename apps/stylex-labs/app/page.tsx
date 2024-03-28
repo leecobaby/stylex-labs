@@ -7,6 +7,12 @@ const styles = stylex.create({
       ':hover': 'blue',
       ':active': 'darkblue',
     },
+    border: {
+      default: '1px solid black',
+      ':hover': '2px solid black',
+      ':active': '3px solid black',
+    },
+    borderRadius: '4px',
   },
 });
 
@@ -18,9 +24,11 @@ export default function Index() {
    */
   return (
     <div className="wrapper">
-      <div className="container">
+      <div className="container p-2">
         <h1 className="text-yellow-500 text-center">Stylex Labs</h1>
-        <button {...stylex.props(styles.button)}>Active</button>
+        <div className="flex justify-center py-4">
+          <button {...stylex.props(styles.button)}>Active</button>
+        </div>
       </div>
     </div>
   );
